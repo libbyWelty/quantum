@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Computing | The Next Frontier</title>
+    <style>
+        :root {
+            --dark-blue: #0a192f;
+            --navy: #112240;
+            --gold: #fcc200;
+            --light-gold: #ffdf00;
+            --text-gray: #8892b0;
+            --text-white: #e6f1ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--dark-blue);
+            color: var(--text-white);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 25, 47, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(252, 194, 0, 0.2);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-white);
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10%;
+            background: radial-gradient(circle at center, #112240 0%, #0a192f 100%);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            color: var(--text-gray);
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 10%;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+        }
+
+        h2::after {
+            content: "";
+            height: 1px;
+            background: var(--gold);
+            flex-grow: 1;
+            margin-left: 20px;
+            opacity: 0.3;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--navy);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid rgba(252, 194, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+        }
+
+        .card h3 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        /* Alabama Specifics */
+        .alabama-section {
+            background-color: var(--navy);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-top: 2rem;
+        }
+
+        .alabama-badge {
+            background: var(--gold);
+            color: var(--dark-blue);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        /* Resources */
+        .resources-list {
+            list-style: none;
+        }
+
+        .resources-list li {
+            margin-bottom: 1rem;
+        }
+
+        .resources-list a {
+            color: var(--text-white);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--gold);
+            transition: 0.2s;
+        }
+
+        .resources-list a:hover {
+            color: var(--gold);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-gray);
+            font-size: 0.8rem;
+            border-top: 1px solid rgba(252, 194, 0, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            section { padding: 60px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">QuantumAL</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#concepts">Concepts</a></li>
+            <li><a href="#apps">Applications</a></li>
+            <li><a href="#alabama">Alabama</a></li>
+            <li><a href="#resources">Resources</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Quantum Computing</h1>
+        <p>Harnessing the laws of quantum mechanics to solve the world's most complex problems.</p>
+    </header>
+
+    <section id="about">
+        <h2>What is Quantum Computing?</h2>
+        <div style="max-width: 800px;">
+            <p>Unlike classical computers that use bits (0s and 1s), quantum computers use <strong>qubits</strong>. These devices leverage the strange and powerful properties of subatomic particles to perform calculations that would take traditional supercomputers thousands of years to complete.</p>
+            <p style="margin-top: 1rem; color: var(--text-gray);">It isn't just about making computers faster; it's about changing the fundamental way we process information to explore possibilities that were previously unreachable.</p>
+        </div>
+    </section>
+
+    <section id="concepts">
+        <h2>Key Concepts</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Superposition</h3>
+                <p>The ability of a quantum system to be in multiple states at the same time until it is measured. Imagine a coin spinning on a table; while it's spinning, it is both heads and tails simultaneously.</p>
+            </div>
+            <div class="card">
+                <h3>Entanglement</h3>
+                <p>A phenomenon where two particles become so deeply linked that the state of one instantly influences the state of the other, regardless of the distance between them. Einstein famously called this "spooky action at a distance."</p>
+            </div>
+            <div class="card">
+                <h3>Quantum Decoherence</h3>
+                <p>The process where quantum information is lost due to interference from the external environment. Maintaining "coherence" is one of the biggest challenges in building stable quantum computers.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="apps">
+        <h2>Real-World Applications</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Drug Discovery</h3>
+                <p>Simulating molecular structures to discover new medicines and materials with unprecedented accuracy.</p>
+            </div>
+            <div class="card">
+                <h3>Cryptography</h3>
+                <p>Creating virtually unhackable communication channels through Quantum Key Distribution (QKD).</p>
+            </div>
+            <div class="card">
+                <h3>Optimization</h3>
+                <p>Solving complex logistical problems, from global supply chains to air traffic control systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="alabama">
+        <h2>Alabama Connections</h2>
+        <div class="alabama-section">
+            <span class="alabama-badge">HUB OF INNOVATION</span>
+            <h3>The Quantum Silicon Prairie</h3>
+            <p>Alabama is emerging as a critical player in the quantum landscape, anchored by the <strong>University of Alabama at Birmingham (UAB)</strong> and the <strong>University of Alabama in Huntsville (UAH)</strong>. These institutions are leading research in quantum materials and sensing.</p>
+            <p style="margin-top: 1rem;">Furthermore, the <strong>HudsonAlpha Institute for Biotechnology</strong> in Huntsville explores how quantum algorithms can revolutionize genomic research, while the state's robust aerospace and defense industry provides a natural testing ground for quantum-secure communications.</p>
+        </div>
+    </section>
+
+    <section id="resources">
+        <h2>Resources</h2>
+        <div class="grid">
+            <div>
+                <ul class="resources-list">
+                    <li><a href="#">IBM Quantum Platform</a> - Access real quantum hardware.</li>
+                    <li><a href="#">Quantum Computing Report</a> - Stay updated on industry news.</li>
+                    <li><a href="#">Qiskit Documentation</a> - Learn the leading quantum SDK.</li>
+                </ul>
+            </div>
+            <div>
+                <ul class="resources-list">
+                    <li><a href="#">QuEra Computing</a> - Neutral-atom quantum computing.</li>
+                    <li><a href="#">Microsoft Azure Quantum</a> - Cloud-based quantum solutions.</li>
+                    <li><a href="#">Google Quantum AI</a> - Leading research and Sycamore processor.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Quantum Computing Initiative. Designed with a passion for the future.</p>
+    </footer>
+
+</body>
+</html>
